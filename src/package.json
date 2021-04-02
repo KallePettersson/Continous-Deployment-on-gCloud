@@ -1,0 +1,27 @@
+{
+  "name": "cd-gcloud-demo",
+  "version": "1.0.0",
+  "description": "CD of Node Express App on Google Cloud with designated realese branch using github actions.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KallePettersson/Continous-Deployment-on-gCloud.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "CD",
+    "GCloud"
+  ],
+  "author": "Anders Nilsson & Kalle Pettersson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KallePettersson/Continous-Deployment-on-gCloud/issues"
+  },
+  "homepage": "https://github.com/KallePettersson/Continous-Deployment-on-gCloud#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
