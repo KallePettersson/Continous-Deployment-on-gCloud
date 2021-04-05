@@ -1,7 +1,7 @@
 const app = require('express')();
 
 app.get('/', (_, res) => {
-  res.send('Hello from App Engine, this app has automatically been deployed with GitHub!');
+  res.send('Hello from App Engine, this app has automatically been deployed with a GitHub action!');
 });
 
 // The server listen to the App Engine-specified port process.env.PORT
