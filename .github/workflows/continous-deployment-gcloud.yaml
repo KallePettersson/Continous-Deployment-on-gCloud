@@ -17,6 +17,9 @@ jobs:
       # Deploys your project to GAE using github secret 
       - uses: google-github-actions/deploy-appengine@main
         with:
-          credentials: ${{ secrets.gcloud_secret }} # Use the GitHub secret "gcloud_secret" as credentials
-          working_directory: ./src/ # Specifies path to working directory (source files for project)
-          deliverables: app.yaml # Path to config file needed for deployment on GAE (Path relative to working directory)
+          # Use the GitHub secret "gcloud_secret" as credentials
+          credentials: ${{ secrets.gcloud_secret }}
+          # Specifies path to working directory (source files for project)
+          working_directory: ./src/
+          # Path to config file needed for deployment on GAE (Path relative to working directory)
+          deliverables: app.yaml
