@@ -59,7 +59,7 @@ runtime: nodejs14
 ![Create project print-screen 2](./assets/create-project2.png)
 
 
-### Connect project to Cloud SDK
+### Connect project to Google Cloud SDK
 1. [Log in to Google Cloud SDK](https://cloud.google.com/sdk/docs/authorizing) in your terminal using the following command:
 ```bash
 gcloud auth login
@@ -77,11 +77,14 @@ gcloud config set project [YOUR_PROJECT_ID]
 ![App Engine Admin API page](./assets/enable-api.png)
 
 ## Deploy the Express project to Google Cloud
+In your `src` folder, where the `app.yaml` file is located, run the following command in your terminal:
 
-In your `src` folder, where the `app.yaml` file is located, run the following command in your terminal. Your source files are then uploaded to Google Cloud Storage. Cloud Build builds your app and deploys it to App Engine. `Node.js` modules are installed in the cloud as listed in your `package.json` and `package-lock.json` files and your service is started by using `npm start`.
 ```bash
 gcloud app deploy
 ```
+Your source files are then uploaded to Google Cloud Storage. Cloud Build builds your app and deploys it to App Engine. `Node.js` modules are installed in the cloud as listed in your `package.json` and `package-lock.json` files and your service is started by using `npm start`.
+
+
 Go to `https://[YOUR_PROJECT_ID].[REGION_ID].r.appspot.com` in any browser to visit you deployed project. This could also be achieved with the following command:
 ```bash
 gcloud app browse
@@ -91,10 +94,10 @@ gcloud app browse
 ## Continuous Deployment using GitHub Actions
 Github Actions is Github’s own and fairly new CI/CD solution. For our demo, we will utilize Google's Google App Engine deployment Action, available at: [Deploy App Engine Repository](https://github.com/google-github-actions/deploy-appengine).
 
-1. Add a Github Actions workflow file `.github/workflows/continous-deployment-gcloud.yaml` in the root of the GitHub project and add the following content:
+1. Add a Github Action workflow file `.github/workflows/continuous-deployment-gcloud.yaml` in the root of the GitHub project and add the following content:
 ```yaml
 # Specifies the name of the action
-name: Continous Deployment to Google App Engine
+name: Continuous Deployment to Google App Engine
 # Specifies that the action should be ran on all pushes to the main branch
 on:
   push:
@@ -103,7 +106,7 @@ on:
 # Specifies the `jobs` to be executed for this action
 jobs:
   build:
-    name: Google App Engine Countinous Deployment
+    name: Google App Engine Continuous Deployment
     # Set the type of machine to run on
     runs-on: ubuntu-latest
     steps:
@@ -137,7 +140,7 @@ NOTE: This will save the key as the `gcloud_secret.json` file. Make sure to **NO
 ```
 .github/
   workflows/
-    continous-deployment-gcloud.yaml
+    continuous-deployment-gcloud.yaml
 src/
   app.yaml
   package-lock.json

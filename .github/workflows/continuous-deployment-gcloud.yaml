@@ -1,5 +1,5 @@
 # Specifies the name of the action
-name: Continous Deployment to Google App Engine
+name: Continuous Deployment to Google App Engine
 # Specifies that the action should be ran on all pushes to the main branch
 on:
   push:
@@ -8,7 +8,7 @@ on:
 # Specifies the `jobs` to be executed for this action
 jobs:
   build:
-    name: Google App Engine Countinous Deployment
+    name: Google App Engine Continuous Deployment
     # Set the type of machine to run on
     runs-on: ubuntu-latest
     steps:
