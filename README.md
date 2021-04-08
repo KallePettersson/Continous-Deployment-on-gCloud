@@ -64,17 +64,17 @@ runtime: nodejs14
 ```bash
 gcloud auth login
 ```
-2. Go to [App Engine Admin API page](https://console.cloud.google.com/apis/library/appengine.googleapis.com) in the Google Cloud console and press the `ENABLE` button. Note: Make sure that your Project ID is set in the project selector dropdown at the top of the page.
-![App Engine Admin API page](./assets/enable-api.png)
-3. Initialize your App Engine app with your project by running the following command:
+2. Initialize your App Engine app with your project by running the following command:
 ```bash
 gcloud app create --project=[YOUR_PROJECT_ID]
 ```
-4. Choose [region](https://cloud.google.com/compute/docs/regions-zones) when prompted.
-5. Set the defualt project in the Cloud SDK core section to your project by executing the following command:
+3. Choose [region](https://cloud.google.com/compute/docs/regions-zones) when prompted.
+4. Set the defualt project in the Cloud SDK core section to your project by executing the following command:
 ```bash
 gcloud config set project [YOUR_PROJECT_ID]
 ```
+5. Go to [App Engine Admin API page](https://console.cloud.google.com/apis/library/appengine.googleapis.com) in the Google Cloud console and press the `ENABLE` button. Note: Make sure that your Project ID is set in the project selector dropdown at the top of the page.
+![App Engine Admin API page](./assets/enable-api.png)
 
 ## Deploy the Express project to Google Cloud
 
