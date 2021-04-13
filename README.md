@@ -1,18 +1,22 @@
 # CD of Node Express App on Google Cloud with designated realese branch using GitHub Actions
 
 In this demo, we will demonstrate how to create a continuous deployment workflow using GitHub Actions that automate deployment of a simple Express server to Google App Engine (GAE), a fully managed, serverless platform for developing and hosting web applications at scale. This demo will go through the following:
-1. How to create a simple Express server
+1. How to create a simple Express server (excluded in the video).
 2. How to create a project on Google Cloud
 3. How to deploy the Express server to Google App Engine (GAE)
 4. How to create a CD workflow to automate deployment using GitHub Actions
+
+
+## Screencast link
+<YOUTUBE-LINK TODO>
 
 ### Prerequisites:
 1. A Cloud account, could be created using this [link](https://console.cloud.google.com/freetrial?_ga=2.23823484.712324435.1617348446-1668699610.1617348446) .
 2. Google Cloud SDK, providing the gcloud command-line tool, [installation instructions](https://cloud.google.com/sdk/docs/install).
 3. [Node.js](https://nodejs.org/en/).
-4. A GitHub repository for your project, clone it and cd into it.
+4. Either a forked copy of this repo or an empty GitHub repository, clone it and cd into it.
 
-## Create a simple Express server
+## Create a simple Express server (you can skip this step if you use the forked repo)
 
 1. Navigate to the root of your GitHub repository.
 2. Create a new folder called `src`.
@@ -94,7 +98,7 @@ gcloud app browse
 ## Continuous Deployment using GitHub Actions
 Github Actions is Github’s own and fairly new CI/CD solution. For our demo, we will utilize Google's Google App Engine deployment Action, available at: [Deploy App Engine Repository](https://github.com/google-github-actions/deploy-appengine).
 
-1. Add a Github Action workflow file `.github/workflows/continuous-deployment-gcloud.yaml` in the root of the GitHub project and add the following content:
+1. Add a Github Action workflow file `.github/workflows/continuous-deployment-gcloud.yaml` in the root of the GitHub project and add the following content (you can skip this step if you use the forked repo):
 ```yaml
 # Specifies the name of the action
 name: Continuous Deployment to Google App Engine
@@ -148,6 +152,8 @@ src/
   index.js
 ```
 
+## Take home message
+Make sure to **NOT** commit your `gcloud_secret.json` file to GitHub. This could give malicious actors remote access to your Google Cloud account.
 
 ## References:
 [Google Cloud - app.yaml reference](https://cloud.google.com/appengine/docs/standard/nodejs/config/appref)  
@@ -155,4 +161,3 @@ src/
 [Google Cloud - Cloud Logging documentation](https://cloud.google.com/logging/docs/view/overview)  
 [Google Cloud - gcloud config set](https://cloud.google.com/sdk/gcloud/reference/config/set)  
 [How to deploy a Node.js app to Google App Engine using Github Actions](https://tomekkolasa.com/how-to-deploy-node-js-app-to-google-app-engine-using-github-actions?fbclid=IwAR0yrWJUW3hfvjEzZA3InR2VOIb8b0gqlC9kWOweSf2aEhJlu4kZjm_cVwA)
-
