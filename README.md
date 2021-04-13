@@ -1,14 +1,12 @@
 # CD of Node Express App on Google Cloud with designated realese branch using GitHub Actions
 
-In this demo, we will demonstrate how to create a continuous deployment workflow using GitHub Actions that automate deployment of a simple Express server to Google App Engine (GAE), a fully managed, serverless platform for developing and hosting web applications at scale. This demo will go through the following:
-1. How to create a simple Express server (excluded in the video).
-2. How to create a project on Google Cloud
-3. How to deploy the Express server to Google App Engine (GAE)
-4. How to create a CD workflow to automate deployment using GitHub Actions
-
+In this demo, we will demonstrate how to create a continuous deployment workflow using GitHub Actions that automate deployment of a simple Express server to Google App Engine (GAE), a fully managed, serverless platform for developing and hosting web applications at scale. We will go through the following:
+1. How to create a project on Google Cloud
+2. How to deploy the Express server to Google App Engine (GAE)
+3. How to create a CD workflow to automate deployment using GitHub Actions
 
 ## Screencast link
-<YOUTUBE-LINK TODO>
+[YouTube link](https://www.youtube.com/watch?v=lY5Uj_VzClc).
 
 ### Prerequisites:
 1. A Cloud account, could be created using this [link](https://console.cloud.google.com/freetrial?_ga=2.23823484.712324435.1617348446-1668699610.1617348446) .
